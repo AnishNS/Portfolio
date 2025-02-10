@@ -11,12 +11,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #111;
+    background-color: #a4a4b686;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 600;
+    color: rgb(4, 30, 30);
 }
 
 nav ul {
@@ -30,17 +36,25 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 400;
+    transition: color 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
 }
 
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-color: #222;
+    padding: 150px 20px;
+    background-color: #1a1a2e;
+    animation: fadeIn 5s ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .about, .projects, .contact {
     padding: 60px 20px;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .project-grid {
@@ -50,9 +64,14 @@ nav ul li a {
 }
 
 .project {
-    background-color: #333;
+    background-color: #222;
     padding: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 form input, form textarea {
@@ -62,19 +81,46 @@ form input, form textarea {
     margin: 10px 0;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
-    background-color: #444;
-    color: white;
+    background-color: rgb(12, 12, 12);
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0e0f0f;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #111;
+    background-color: #0a0a23;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 2; }
+}
+
+.navigation{
+    text-align: end;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: normal;
+    padding-left: 2%;
+}
+.skills{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+
 }
